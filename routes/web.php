@@ -14,3 +14,7 @@ Route::get('/obat', fn() => view('obat'));
 Route::get('/pangan', fn() => view('pangan'));
 Route::get('/suplamen-kesehatan', fn() => view('suplamen-kesehatan'));
 Route::get('/single', fn() => view('single'));
+Route::get('/single', fn() => view('single'));
+
+
+

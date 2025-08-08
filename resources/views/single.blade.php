@@ -1,20 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Blog Single - BPOM Bogor')
+@section('title', 'PDF Viewer - BPOM Bogor')
 
 @section('content')
     <!-- Start Breadcrumb
-        ============================================= -->
+                                            ============================================= -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('assets/img/banner/8.jpg') }})">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 mt-5">
-                    <h1>Blog Single</h1>
+                    <h1>Judul PDF</h1>
                     <ul class="breadcrumb">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li class="active">Single</li>
+                        <li class="active">Judul PDF</li>
                     </ul>
                 </div>
             </div>
@@ -42,18 +41,14 @@
                                             <a href="#"><i class="fas fa-user"></i> Admin</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fas fa-comments"></i> 0</a>
+                                            <a href="#"><i class="fas fa-users"></i> 0</a>
                                         </li>
                                     </ul>
                                 </div>
-
-                                <!-- FlipbookJS Container -->
-                                <div id="flipbookContainer" style="
-                      width: 100%;
-                      max-width: 800px;
-                      height: 500px;
-                      margin: 0 auto;
-                    "></div>
+                                <!-- Embed PDF -->
+                                <iframe
+                                    src="{{ asset('assets/pdf/web/viewer.html') }}?file={{ asset('assets/pdf/Guidebook_creativevideo.pdf') }}"
+                                    width="100%" height="600px" style="border: none;"></iframe>
                             </div>
                         </div>
                     </div>

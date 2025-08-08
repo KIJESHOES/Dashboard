@@ -35,7 +35,6 @@ class ArticleResource extends Resource
                 TextInput::make('content')
                 ->label('Konten')
                 ->placeholder('Masukkan konten artikel')
-                ->limit(50)
                 ->required(),
                 TextInput::make('author')
                 ->label('Penulis')

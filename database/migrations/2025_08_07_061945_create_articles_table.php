@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('author');
-            $table->string('slug')->unique()->nullable();
+            // $table->string('slug')->unique()->nullable();
             $table->dateTime('published_at')->nullable();
             $table->string('link');
             $table->enum('category', ['Obat', 'Pangan', 'Kosmetik', 'Obat Tradisional', 'Suplemen Kesehatan', 'Materi FKP']);

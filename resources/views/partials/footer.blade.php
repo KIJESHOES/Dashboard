@@ -12,7 +12,17 @@
                             Jl. Raya Jakarta-Bogor No.27B, Nanggewer, Kec. Cibinong,
                             Kabupaten Bogor, Jawa Barat 16810
                         </p>
-                        <a href="#" class="btn circle btn-theme effect btn-sm">Get Started</a>
+                        <!-- {{-- <a href="#" class="btn circle btn-theme effect btn-sm">Get Started</a> --}}
+                        Embed Google Maps -->
+
+                        <div class="mt-3 rounded overflow-hidden" style="width: 350px; height: 250px;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.077734840933!2d106.83888327360522!3d-6.511844893480534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c10a55555555%3A0xab4677308822649b!2sBalai%20POM%20di%20Bogor!5e0!3m2!1sen!2sid!4v1754621203644!5m2!1sen!2sid"
+                                width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 item">
