@@ -15,7 +15,8 @@ class StatsDashboard extends BaseWidget
             Stat::make('Jumlah Article', $countArticles),
             // Stat::make('Jumlah Visitor', $countVisitors),
             Stat::make('Jumlah Article', $countArticles),
-
+            Stat::make('Jumlah Article', $countArticles),
+            Stat::make('Jumlah Article', $countArticles),
         ];
     }
 }
