@@ -4,11 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
+return new class extends Migration {
+
     public function up(): void
     {
         Schema::create('articles', function (Blueprint $table) {
@@ -16,17 +13,16 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('author');
-            // $table->string('slug')->unique()->nullable();
-            $table->dateTime('published_at')->nullable();
-            $table->string('link');
-            $table->enum('category', ['Obat', 'Pangan', 'Kosmetik', 'Obat Tradisional', 'Suplemen Kesehatan', 'Materi FKP']);
+            $table->string('slug')->unique();
+            $table->timestamp('published_at')->nullable();
+            $table->string('link')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('category_id')->constrained()->onDelete('cascade'); // relasi ke categories
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('articles');

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Filament\Resources\ArticleResource\RelationManagers;
 use App\Models\Article;
+use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -44,18 +45,11 @@ class ArticleResource extends Resource
                 ->label('Link')
                 ->placeholder('Masukkan link artikel')
                 ->required(),
-                Select::make('category')
+                Select::make('category_id')
                     ->label('Kategori')
                     ->required()
                     ->placeholder('Pilih kategori artikel')
-                    ->options([
-                        'Obat' => 'Obat',
-                        'Pangan' => 'Pangan',
-                        'Kosmetik' => 'Kosmetik',
-                        'Obat Tradisional' => 'Obat Tradisional',
-                        'Suplemen Kesehatan' => 'Suplemen Kesehatan',
-                        'Materi FKP' => 'Materi FKP',
-                    ])
+                    ->options(Category::pluck('name', 'id'))
                     ->searchable(),
             ]);
     }
@@ -70,7 +64,7 @@ class ArticleResource extends Resource
                 TextColumn::make('content')->label('Kontent'),
                 TextColumn::make('author')->label('Penulis'),
                 TextColumn::make('link'),
-                TextColumn::make('category')->label('Kategori'),
+                TextColumn::make('category.name')->label('Kategori'),
 
             ])
             ->filters([
@@ -78,6 +72,7 @@ class ArticleResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

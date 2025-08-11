@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BlogController;
 Route::get('/', function () {
     return view('beranda');
 });
@@ -16,5 +17,4 @@ Route::get('/suplamen-kesehatan', fn() => view('suplamen-kesehatan'));
 Route::get('/single', fn() => view('single'));
 Route::get('/single', fn() => view('single'));
 
-
-
+Route::get('/articles/{id}', [ArticleController::class, 'show']);

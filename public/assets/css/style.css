@@ -7,7 +7,7 @@ Version: 2.0
 -------------------------------------
 
 Table of contents
-        
+
     01. Google font
     02. Reset
     03. Typography
@@ -63,7 +63,7 @@ Table of contents
 
 
 
-/* ============================================================== 
+/* ==============================================================
      # Reset Browsers
 =================================================================== */
 
@@ -232,7 +232,7 @@ i::before {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Template Default Styles
 =================================================================== */
 
@@ -315,7 +315,7 @@ p {
   }
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Helper CSS
 =================================================================== */
 
@@ -915,8 +915,8 @@ p {
 	opacity: 0.9;
 }
 
-/* ============================================================== 
-    # Video Play Button 
+/* ==============================================================
+    # Video Play Button
 =================================================================== */
 .video-play-button {
 	display: inline-block;
@@ -991,7 +991,7 @@ p {
 
 
 
-/* ============================================================== 
+/* ==============================================================
     # Template Animation
 =================================================================== */
 
@@ -1464,7 +1464,7 @@ p {
 	}
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Button Styles
 =================================================================== */
 .btn {
@@ -2302,8 +2302,8 @@ p {
 }
 
 
-/* ============================================================== 
-     # Bradcrumb 
+/* ==============================================================
+     # Bradcrumb
 =================================================================== */
 .breadcrumb-area {
   padding: 100px 0;
@@ -2348,7 +2348,7 @@ p {
   padding: 0 5px;
 }
 
-.breadcrumb-area .breadcrumb a, 
+.breadcrumb-area .breadcrumb a,
  .breadcrumb-area .breadcrumb li {
   font-weight: 700;
   text-transform: uppercase;
@@ -2364,16 +2364,16 @@ p {
   align-items: center;
 }
 
-/* ============================================================== 
-     # Banner 
+/* ==============================================================
+     # Banner
 =================================================================== */
-body, 
-.banner-area, 
+body,
+.banner-area,
 .banner-area div {
   height: 100%;
 }
 
-.banner-area.auto-height, 
+.banner-area.auto-height,
 .banner-area.auto-height div {
   height: auto;
   min-height: 100%;
@@ -2395,7 +2395,7 @@ body,
   width: 100%;
 }
 
-.banner-area .box-cell, 
+.banner-area .box-cell,
  .banner-area .box-cell div {
   height: auto;
 }
@@ -2783,29 +2783,29 @@ body,
 }
 
 /* Animation delays */
-.banner-area .item h1:first-child, 
- .banner-area .item h2:first-child, 
- .banner-area .item h3:first-child, 
- .banner-area .item h4:first-child, 
- .banner-area .item h5:first-child, 
+.banner-area .item h1:first-child,
+ .banner-area .item h2:first-child,
+ .banner-area .item h3:first-child,
+ .banner-area .item h4:first-child,
+ .banner-area .item h5:first-child,
  .banner-area .item h6:first-child {
   animation-delay: .5s;
 }
 
-.banner-area .item h1:nth-child(2), 
- .banner-area .item h2:nth-child(2), 
- .banner-area .item h3:nth-child(2), 
- .banner-area .item h4:nth-child(2), 
- .banner-area .item h5:nth-child(2), 
+.banner-area .item h1:nth-child(2),
+ .banner-area .item h2:nth-child(2),
+ .banner-area .item h3:nth-child(2),
+ .banner-area .item h4:nth-child(2),
+ .banner-area .item h5:nth-child(2),
  .banner-area .item h6:nth-child(2) {
   animation-delay: .7s;
 }
 
-.carousel-caption h1:nth-child(3), 
- .carousel-caption h2:nth-child(3), 
- .carousel-caption h3:nth-child(3), 
- .carousel-caption h4:nth-child(3), 
- .carousel-caption h5:nth-child(3), 
+.carousel-caption h1:nth-child(3),
+ .carousel-caption h2:nth-child(3),
+ .carousel-caption h3:nth-child(3),
+ .carousel-caption h4:nth-child(3),
+ .carousel-caption h5:nth-child(3),
  .carousel-caption h6:nth-child(3) {
   animation-delay: .9s;
 }
@@ -2814,7 +2814,7 @@ body,
   animation-delay: .5s;
 }
 
-.banner-area .item a, 
+.banner-area .item a,
  .banner-area .item button {
   animation-delay: .7s;
 }
@@ -2824,21 +2824,21 @@ body,
   transition-property: opacity;
 }
 
-.carousel-fade .carousel-inner .item, 
- .carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .item,
+ .carousel-fade .carousel-inner .active.left,
  .carousel-fade .carousel-inner .active.right {
   opacity: 0;
 }
 
-.carousel-fade .carousel-inner .active, 
- .carousel-fade .carousel-inner .next.left, 
+.carousel-fade .carousel-inner .active,
+ .carousel-fade .carousel-inner .next.left,
  .carousel-fade .carousel-inner .prev.right {
   opacity: 1;
 }
 
-.carousel-fade .carousel-inner .next, 
- .carousel-fade .carousel-inner .prev, 
- .carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .next,
+ .carousel-fade .carousel-inner .prev,
+ .carousel-fade .carousel-inner .active.left,
  .carousel-fade .carousel-inner .active.right {
   left: 0;
   -webkit-transform: translate3d(0, 0, 0);
@@ -3123,8 +3123,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # About 
+/* ==============================================================
+     # About
 =================================================================== */
 .about-area .default.info h4 {
   color: var(--color-primary);
@@ -3231,16 +3231,16 @@ body,
   margin: 0;
 }
 
-.about-area .services-info .single-item:nth-child(1) .item, 
+.about-area .services-info .single-item:nth-child(1) .item,
 .about-area .services-info .single-item:nth-child(4) .item {
   background: var(--color-primary);
 }
 
-.about-area .services-info .single-item:nth-child(1) .item i, 
+.about-area .services-info .single-item:nth-child(1) .item i,
 .about-area .services-info .single-item:nth-child(4) .item i,
-.about-area .services-info .single-item:nth-child(1) .item h4, 
+.about-area .services-info .single-item:nth-child(1) .item h4,
 .about-area .services-info .single-item:nth-child(4) .item h4,
-.about-area .services-info .single-item:nth-child(1) .item p, 
+.about-area .services-info .single-item:nth-child(1) .item p,
 .about-area .services-info .single-item:nth-child(4) .item p {
   color: #fff;
 }
@@ -3346,7 +3346,7 @@ body,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Services Box
 =================================================================== */
 
@@ -3408,7 +3408,7 @@ body,
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # How it works
 =================================================================== */
 
@@ -3530,8 +3530,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # Chose Us 
+/* ==============================================================
+     # Chose Us
 =================================================================== */
 
 .choseus-area {
@@ -3649,8 +3649,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # Features 
+/* ==============================================================
+     # Features
 =================================================================== */
 
 .features-area.bottom-small {
@@ -3696,7 +3696,7 @@ body,
   margin-bottom: 50px;
 }
 
-.features-area.cell-items .features-thumb, 
+.features-area.cell-items .features-thumb,
 .features-area.cell-items .features-items {
   display: table-cell;
   float: none;
@@ -3708,7 +3708,7 @@ body,
   margin-top: 50px;
 }
 
-.features-area.cell-items .features-items .single-item:first-child, 
+.features-area.cell-items .features-items .single-item:first-child,
 .features-area.cell-items .features-items .single-item:nth-child(2) {
   margin-top: 0;
 }
@@ -3813,8 +3813,8 @@ body,
   margin: 0;
 }
 
-/* ============================================================== 
-     # Overview 
+/* ==============================================================
+     # Overview
 =================================================================== */
 
 .overview-area .nav-tabs li {
@@ -3852,7 +3852,7 @@ body,
   color: var(--white);
 }
 
-.overview-area .overview-items.vertical .tab-navigation, 
+.overview-area .overview-items.vertical .tab-navigation,
 .overview-area .overview-items.vertical .tab-content {
   display: table-cell;
   vertical-align: top;
@@ -3882,7 +3882,7 @@ body,
   text-transform: capitalize;
 }
 
-.overview-area .overview-items .item .thumb, 
+.overview-area .overview-items .item .thumb,
 .overview-area .overview-items .item .info {
   display: table-cell;
   float: none;
@@ -3944,7 +3944,7 @@ body,
   margin-top: 30px !important;
 }
 
-.overview-area .overview-carousel .owl-nav .owl-prev, 
+.overview-area .overview-carousel .owl-nav .owl-prev,
 .overview-area .overview-carousel .owl-nav .owl-next {
   background: transparent;
   color: var(--color-primary);
@@ -4008,8 +4008,8 @@ body,
   padding: 30px;
 }
 
-/* ============================================================== 
-     # Pricing Table 
+/* ==============================================================
+     # Pricing Table
 =================================================================== */
 .pricing-item {
   background: var(--white);
@@ -4107,8 +4107,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # Team 
+/* ==============================================================
+     # Team
 =================================================================== */
 
 .team-area.default-padding {
@@ -4236,12 +4236,12 @@ body,
   width: 20px;
 }
 
-.team-area .team-carousel .owl-dots .owl-dot.active span, 
+.team-area .team-carousel .owl-dots .owl-dot.active span,
 .team-area .team-carousel .owl-dots .owl-dot:hover span {
   background: var(--color-primary);
 }
 
-/* ============================================================== 
+/* ==============================================================
      # Video Button Play
 =================================================================== */
 
@@ -4372,8 +4372,8 @@ body,
   z-index: 3;
 }
 
-/* ============================================================== 
-     # Blog 
+/* ==============================================================
+     # Blog
 =================================================================== */
 
 .blog-area .blog-items .item {
@@ -4634,8 +4634,8 @@ body,
   text-transform: capitalize;
 }
 
-.comments-list .commen-item .content h3, 
-.comments-list .commen-item .content h4, 
+.comments-list .commen-item .content h3,
+.comments-list .commen-item .content h4,
 .comments-list .commen-item .content h5 {
   font-size: 14px;
   font-weight: 700;
@@ -4708,8 +4708,8 @@ body,
   margin-bottom: 15px;
 }
 
-.comments-form .title h2, 
-.comments-form .title h3, 
+.comments-form .title h2,
+.comments-form .title h3,
 .comments-form .title h4 {
   border-bottom: 1px solid #e7e7e7;
   font-weight: 700;
@@ -4728,8 +4728,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # Testimonials 
+/* ==============================================================
+     # Testimonials
 =================================================================== */
 
 .testimonials-area.default-padding {
@@ -4835,8 +4835,8 @@ body,
 }
 
 
-/* ============================================================== 
-     # Subscribe Area 
+/* ==============================================================
+     # Subscribe Area
 =================================================================== */
 
 .subscribe-area h2 {
@@ -4915,8 +4915,8 @@ body,
   -o-transition: all 0.35s ease-in-out;
 }
 
-/* ============================================================== 
-     # Contact 
+/* ==============================================================
+     # Contact
 =================================================================== */
 
 .contact-us-area .address .address-items h4 {
@@ -5131,7 +5131,7 @@ body,
 
 
 
-/* ============================================================== 
+/* ==============================================================
      # Companies Area
 =================================================================== */
 .companies-area .row {
@@ -5152,7 +5152,7 @@ body,
   margin: 0;
 }
 
-.companies-area .clients-items .owl-nav .owl-prev, 
+.companies-area .clients-items .owl-nav .owl-prev,
 .companies-area .clients-items .owl-nav .owl-next {
   background: transparent;
   color: var(--color-primary);
@@ -5188,7 +5188,7 @@ body,
   font-size: 40px;
 }
 
-/* ============================================================== 
+/* ==============================================================
      # Faq
 =================================================================== */
 
@@ -5293,14 +5293,14 @@ body,
   font-weight: 900;
 }
 
-/* ============================================================== 
-     # Login 
+/* ==============================================================
+     # Login
 =================================================================== */
-.login-area, 
+.login-area,
 .login-area div {
     height: 100%;
 }
-.login-area div.login, 
+.login-area div.login,
 .login-area div.login div {
     height: auto;
 }
@@ -5354,8 +5354,8 @@ body,
     width: 100%;
 }
 
-/* ============================================================== 
-     # 404 
+/* ==============================================================
+     # 404
 =================================================================== */
 .error-page-area h1 {
   font-size: 150px;
@@ -5379,8 +5379,8 @@ body,
   }
 }
 
-/* ============================================================== 
-     # Footer 
+/* ==============================================================
+     # Footer
 =================================================================== */
 
   .link-grey {
@@ -5565,8 +5565,8 @@ footer.color-yellow .footer-bottom p a {
   color: var(--color-primary);
 }
 
-/* ============================================================== 
-     # Preloader 
+/* ==============================================================
+     # Preloader
 =================================================================== */
 
 .softing-preloader {
