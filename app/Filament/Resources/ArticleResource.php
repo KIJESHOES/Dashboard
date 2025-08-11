@@ -13,9 +13,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\TextColumn;;
 
-;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -30,21 +29,27 @@ class ArticleResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')
-                ->label('Judul')
-                ->placeholder('Masukkan judul artikel')
-                ->required(),
+                    ->label('Judul')
+                    ->placeholder('Masukkan judul artikel')
+                    ->required(),
                 TextInput::make('content')
-                ->label('Konten')
-                ->placeholder('Masukkan konten artikel')
-                ->required(),
+                    ->label('Konten')
+                    ->placeholder('Masukkan konten artikel')
+                    ->required(),
                 TextInput::make('author')
-                ->label('Penulis')
-                ->placeholder('Masukkan nama penulis')
-                ->required(),
+                    ->label('Penulis')
+                    ->placeholder('Masukkan nama penulis')
+                    ->required(),
                 TextInput::make('link')
-                ->label('Link')
-                ->placeholder('Masukkan link artikel')
-                ->required(),
+                    ->label('Link PDF Google Drive')
+                    ->placeholder('Masukkan link share Google Drive')
+                    ->required()
+                    ->afterStateUpdated(function ($state, callable $set) {
+                        if (preg_match('/\/d\/(.*?)\//', $state, $matches)) {
+                            $fileId = $matches[1];
+                            $set('link', "https://drive.google.com/file/d/{$fileId}/preview");
+                        }
+                    }),
                 Select::make('category_id')
                     ->label('Kategori')
                     ->required()
@@ -60,10 +65,10 @@ class ArticleResource extends Resource
 
             ->columns([
                 TextColumn::make('title')->label('Judul')
-                ->searchable(),
+                    ->searchable(),
                 TextColumn::make('content')->label('Kontent'),
                 TextColumn::make('author')->label('Penulis'),
-                TextColumn::make('link'),
+                TextColumn::make('link')->label('Link PDF'),
                 TextColumn::make('category.name')->label('Kategori'),
 
             ])

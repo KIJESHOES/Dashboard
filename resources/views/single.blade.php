@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Start Breadcrumb
-                                            ============================================= -->
+                                                ============================================= -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('assets/img/banner/8.jpg') }})">
         <div class="container">
@@ -46,13 +46,10 @@
                                     </ul>
                                 </div>
 
-                                <!-- FlipbookJS Container -->
-                                <div id="flipbookContainer" style="
-                      width: 100%;
-                      max-width: 800px;
-                      height: 500px;
-                      margin: 0 auto;
-                    "></div>
+                                <!-- Embed PDF -->
+                                <iframe
+                                    src="{{ asset('assets/pdf/web/viewer.html') }}?file={{ asset('assets/pdf/Materi Obat Aman - Tomas.pdf') }}"
+                                    width="100%" height="600px" style="border: none;"></iframe>
                             </div>
                         </div>
                     </div>

@@ -16,4 +16,10 @@ class EditArticle extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    // Tambahkan ini biar setelah save langsung balik ke index
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

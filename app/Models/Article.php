@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $fillable = ['title', 'slug', 'content', 'image', 'category_id', 'published_at'];
+    protected $fillable = ['title', 'slug', 'content', 'image', 'link', 'category_id', 'published_at'];
 
     public function category()
     {
@@ -19,5 +19,3 @@ class Article extends Model
     }
 
 }
-
-

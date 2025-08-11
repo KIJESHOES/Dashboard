@@ -28,7 +28,8 @@
                 <div class="col-lg-10">
                     <div class="single-blog-item">
                         <div class="thumb mb-4">
-                            <img src="{{ asset('assets/img/blog/placeholder.jpg') }}" alt="Artikel" class="img-fluid rounded">
+                            <img src="{{ asset('assets/img/blog/placeholder.jpg') }}" alt="Artikel"
+                                class="img-fluid rounded">
                         </div>
                         <div class="info">
                             <div class="meta mb-3">
@@ -48,9 +49,15 @@
                             <p class="mt-3">
                                 {!! nl2br(e($article->content)) !!}
                             </p>
+                            <!-- Embed PDF -->
+                            @if ($article->link)
+                                <iframe src="{{ $article->link }}" width="100%" height="600"
+                                    style="border:none;"></iframe>
+                            @endif
+
 
                             @if ($article->link)
-                                <a href="{{ $article->link }}" class="btn btn-primary mt-4" target="_blank">
+                                <a href="{{ $article->link }}" class="btn circle btn-theme effect btn-sm" target="_blank">
                                     Lihat Sumber Asli
                                 </a>
                             @endif
