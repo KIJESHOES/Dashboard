@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Start Breadcrumb
-        ============================================= -->
+            ============================================= -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('assets/img/banner/6.jpg') }})">
         <div class="container">
@@ -22,7 +22,7 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Blog
-        ============================================= -->
+            ============================================= -->
     <div class="blog-area full-width bg-gray default-padding">
         <div class="container">
             <div class="blog-items">
@@ -50,7 +50,7 @@
                                             <a href="#"><i class="fas fa-user"></i> User</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fas fa-comments"></i> 23</a>
+                                            <a href="#"><i class="fas fa-users"></i> 23</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -87,7 +87,7 @@
                                             <a href="#"><i class="fas fa-user"></i> User</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fas fa-comments"></i> 47</a>
+                                            <a href="#"><i class="fas fa-users"></i> 47</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -124,7 +124,7 @@
                                             <a href="#"><i class="fas fa-user"></i> User</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fas fa-comments"></i> 58</a>
+                                            <a href="#"><i class="fas fa-users"></i> 58</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -161,7 +161,7 @@
                                             <a href="#"><i class="fas fa-user"></i> User</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fas fa-comments"></i> 58</a>
+                                            <a href="#"><i class="fas fa-users"></i> 58</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -176,15 +176,22 @@
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 pagi-area">
-                        <nav aria-label="navigation">
+                        <nav aria-label="Page navigation example">
                             <ul class="pagination">
-                                <li><a href="#">Previous</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">Next</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Previous</a>
+                                </li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
                             </ul>
                         </nav>
+
                     </div>
                 </div>
             </div>

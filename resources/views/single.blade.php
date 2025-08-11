@@ -45,10 +45,14 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- Embed PDF -->
-                                <iframe
-                                    src="{{ asset('assets/pdf/web/viewer.html') }}?file={{ asset('assets/pdf/Guidebook_creativevideo.pdf') }}"
-                                    width="100%" height="600px" style="border: none;"></iframe>
+
+                                <!-- FlipbookJS Container -->
+                                <div id="flipbookContainer" style="
+                      width: 100%;
+                      max-width: 800px;
+                      height: 500px;
+                      margin: 0 auto;
+                    "></div>
                             </div>
                         </div>
                     </div>

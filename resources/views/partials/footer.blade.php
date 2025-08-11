@@ -12,8 +12,8 @@
                             Jl. Raya Jakarta-Bogor No.27B, Nanggewer, Kec. Cibinong,
                             Kabupaten Bogor, Jawa Barat 16810
                         </p>
-                        <!-- {{-- <a href="#" class="btn circle btn-theme effect btn-sm">Get Started</a> --}}
-                        Embed Google Maps -->
+                        {{-- <a href="#" class="btn circle btn-theme effect btn-sm">Get Started</a> --}}
+                        <!-- Embed Google Maps -->
 
                         <div class="mt-3 rounded overflow-hidden" style="width: 350px; height: 250px;">
                             <iframe
