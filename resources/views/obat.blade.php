@@ -3,8 +3,7 @@
 @section('title', 'Obat - BPOM Bogor')
 
 @section('content')
-    <!-- Start Breadcrumb
-            ============================================= -->
+    <!-- Start Breadcrumb -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('assets/img/banner/1.jpg') }})">
         <div class="container">
@@ -21,177 +20,55 @@
     </div>
     <!-- End Breadcrumb -->
 
-    <!-- Start Blog
-            ============================================= -->
+    <!-- Start Blog -->
     <div class="blog-area full-width bg-gray default-padding">
         <div class="container">
             <div class="blog-items">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{{ url('single') }}">
-                                    <img src="{{ asset('assets/img/blog/4.jpg') }}" alt="Thumb" />
-                                    <div class="post-type">
-                                        <i class="fas fa-image"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="{{ url('single') }}">Believe has request not how comfort</a>
-                                </h4>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-calendar-alt"></i> 12 Nov, 2018</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> User</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-users"></i> 23</a>
-                                        </li>
-                                    </ul>
+                    @forelse ($articles as $article)
+                        <div class="col-lg-6 col-md-6 single-item">
+                            <div class="item">
+                                <div class="thumb">
+                                    <a href="{{ route('detail', $article->id) }}">
+                                        <img src="{{ asset('assets/img/blog/placeholder.jpg') }}" alt="Thumb" />
+                                        <div class="post-type">
+                                            <i class="fas fa-image"></i>
+                                        </div>
+                                    </a>
                                 </div>
-                                <p>
-                                    Months on ye at by esteem desire warmth former. Sure that
-                                    that way gave any fond now. His boy middleton sir nor
-                                    engrossed affection excellent. Dissimilar compliment
-                                    cultivated preference eat sufficient may. Well next door
-                                    soon we mr he four
-                                </p>
+                                <div class="info">
+                                    <h4>
+                                        <a href="{{ route('detail', $article->id) }}">
+                                            {{ $article->title }}
+                                        </a>
+                                    </h4>
+                                    <div class="meta">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="fas fa-calendar-alt"></i> {{ $article->created_at->format('d M, Y') }}</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-user"></i> {{ $article->author }}</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fas fa-book"></i> {{ $article->category->name ?? 'Tanpa Kategori' }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        {{ Str::limit($article->content, 150) }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{{ url('single') }}">
-                                    <img src="{{ asset('assets/img/blog/2.jpg') }}" alt="Thumb" />
-                                    <div class="post-type">
-                                        <i class="fas fa-video"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="{{ url('single') }}">Speaking replying mistress him numerous</a>
-                                </h4>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-calendar-alt"></i> 09 Nov, 2018</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> User</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-users"></i> 47</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p>
-                                    Timed she his law the spoil round defer. In surprise
-                                    concerns informed betrayed he learning is ye. Ignorant
-                                    formerly so ye blessing. He as spoke avoid given downs money
-                                    on we. Of properly carriage shutters ye as wandered up
-                                    repeated moreover.
-                                </p>
-                            </div>
+                    @empty
+                        <div class="col-12 text-center">
+                            <p>Belum ada artikel tersedia.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{{ url('single') }}">
-                                    <img src="{{ asset('assets/img/blog/3.jpg') }}" alt="Thumb" />
-                                    <div class="post-type">
-                                        <i class="fas fa-images"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="{{ url('single') }}">Reasonably conviction solicitude</a>
-                                </h4>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-calendar-alt"></i> 16 Nov, 2018</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> User</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-users"></i> 58</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p>
-                                    His exquisite sincerity education shameless ten earnestly
-                                    breakfast add. So we me unknown as improve hastily sitting
-                                    forming. Especially favourable compliment but thoroughly
-                                    unreserved saw she themselves. Sufficient impossible him may
-                                    ten insensible
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 single-item">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{{ url('single') }}">
-                                    <img src="{{ asset('assets/img/blog/1.jpg') }}" alt="Thumb" />
-                                    <div class="post-type">
-                                        <i class="fas fa-images"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="{{ url('single') }}">Reasonably conviction solicitude</a>
-                                </h4>
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fas fa-calendar-alt"></i> 16 Nov, 2018</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-user"></i> User</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fas fa-users"></i> 58</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p>
-                                    His exquisite sincerity education shameless ten earnestly
-                                    breakfast add. So we me unknown as improve hastily sitting
-                                    forming. Especially favourable compliment but thoroughly
-                                    unreserved saw she themselves. Sufficient impossible him may
-                                    ten insensible
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 pagi-area">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Previous</a>
-                                </li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    @endforelse
 
+                    <div class="col-lg-12 col-md-12 pagi-area">
+                        {{ $articles->links('pagination::bootstrap-5') }}
                     </div>
                 </div>
             </div>
