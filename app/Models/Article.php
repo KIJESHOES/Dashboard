@@ -13,6 +13,11 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function visits()
+    {
+        return $this->hasMany(Visit::class);
+    }
+
     public static function boot()
     {
         parent::boot();

@@ -27,7 +27,7 @@
                             <li><a href="{{ route('articles.byCategory', 'Obat') }}">Obat</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Pangan') }}">Pangan</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Kosmetik') }}">Kosmetik</a></li>
-                            <li><a href="{{ route('articles.byCategory', 'ObatTradisional') }}">Obat Tradisional</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Obat Tradisional') }}">Obat Tradisional</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Suplemen Kesehatan') }}">Suplemen Kesehatan</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Materi FKP') }}">Materi FKP</a></li>
                         </ul>

@@ -4,8 +4,7 @@
 @section('title', 'Pojok Literasi - BPOM Bogor')
 
 @section('content')
-    <!-- Start Banner
-                                                    ============================================= -->
+    <!-- Start Banner============================================= -->
     <div class="banner-area auto-height text-center text-light shadow dark-hard small-text bg-fixed"
         style="background-image: url({{ asset('assets/img/banner/7.jpg') }})">
         <div class="box-table">

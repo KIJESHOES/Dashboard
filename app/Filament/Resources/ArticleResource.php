@@ -13,7 +13,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\TextColumn;;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -65,16 +66,31 @@ class ArticleResource extends Resource
 
             ->columns([
                 TextColumn::make('title')->label('Judul')
+                    ->searchable()
+                    ->limit(50)
+                    ->wrap(),
+                TextColumn::make('content')->label('Kontent')
+                    ->limit(50)
+                    ->wrap(),
+                TextColumn::make('author')->label('Penulis')
+                    ->limit(50)
+                    ->wrap(),
+                TextColumn::make('link')->label('Link PDF')
+                    ->limit(50)
+                    ->wrap(),
+                TextColumn::make('category.name')->label('Kategori')
+                    ->label('Kategori')
                     ->searchable(),
-                TextColumn::make('content')->label('Kontent'),
-                TextColumn::make('author')->label('Penulis'),
-                TextColumn::make('link')->label('Link PDF'),
-                TextColumn::make('category.name')->label('Kategori'),
+
 
             ])
+
             ->filters([
-                //
+                SelectFilter::make('category_id')
+                    ->label('Kategori')
+                    ->relationship('category', 'name') // Otomatis ambil nama kategori
             ])
+
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
