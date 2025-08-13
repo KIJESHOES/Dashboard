@@ -2,9 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Models\Article;
+use App\Models\Visit;
 class ArticleController extends Controller
 {
-    //
+    public function byCategory($categoryName)
+    {
+        $articles = Article::whereHas('category', function ($query) use ($categoryName) {
+            $query->where('name', $categoryName);
+        })->paginate(6);
+
+        return view('articles.by-category', [
+            'articles' => $articles,
+            'categoryName' => $categoryName
+        ]);
+    }
+
+    public function show(string $slug)
+    {
+        $article = Article::with('category')->where('slug', $slug)->firstOrFail();
+
+        $totalVisitors = Visit::count();
+
+        $articleVisitors = Visit::where('page_type', 'article')
+        ->where('page_id', $article->id)
+        ->count();
+
+        $ip = request()->ip();
+        $alreadyVisited = Visit::where('page_type', 'article')
+            ->where('page_id', $article->id)
+            ->where('ip_address', $ip)
+            ->where('created_at', '>=', now()->subHours(1))
+            ->exists();
+
+        if (! $alreadyVisited) {
+            Visit::create([
+                'page_type' => 'article',
+                'page_id' => $article->id,
+                'ip_address' => $ip,
+            ]);
+        }
+
+        return view('articles.detail', compact('article'));
+    }
 }

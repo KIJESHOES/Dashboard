@@ -24,12 +24,12 @@
                     <li class="dropdown dropdown-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Layanan</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('obat') }}">Obat</a></li>
-                            <li><a href="{{ url('obat-tradisional') }}">Obat Tradisional</a></li>
-                            <li><a href="{{ url('suplamen-kesehatan') }}">Suplamen Kesehatan</a></li>
-                            <li><a href="{{ url('kosmetik') }}">Kosmetik</a></li>
-                            <li><a href="{{ url('pangan') }}">Pangan</a></li>
-                            <li><a href="{{ url('materi-fkhp-2025') }}">Materi FKP 2025</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Obat') }}">Obat</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Pangan') }}">Pangan</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Kosmetik') }}">Kosmetik</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'ObatTradisional') }}">Obat Tradisional</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Suplemen Kesehatan') }}">Suplemen Kesehatan</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Materi FKP') }}">Materi FKP</a></li>
                         </ul>
                     </li>
                     <li><a class="smooth-menu" href="{{ url('kontak-kami') }}">Kontak Kami</a></li>

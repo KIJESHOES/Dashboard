@@ -5,7 +5,7 @@
 
 @section('content')
     <!-- Start Breadcrumb
-        ============================================= -->
+            ============================================= -->
     <div class="breadcrumb-area shadow dark bg-fixed text-center padding-xl text-light"
         style="background-image: url({{ asset('assets/img/banner/8.jpg') }})">
         <div class="container">
@@ -23,7 +23,7 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Contact Area
-        ============================================= -->
+            ============================================= -->
     <div id="contact" class="contact-us-area default-padding">
         <div class="container">
             <div class="row">
@@ -31,10 +31,8 @@
                     <div class="site-heading text-center">
                         <h2>Hubungi Kami</h2>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Consequatur, fuga est repellat nihil pariatur distinctio placeat
-                            soluta, porro magni, aperiam commodi esse a saepe enim eius
-                            praesentium dolores et illum!
+                            Ada pertanyaan atau butuh bantuan? Hubungi kami melalui kontak yang tersedia, kami siap membantu
+                            kamu!
                         </p>
                     </div>
                 </div>
