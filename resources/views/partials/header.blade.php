@@ -27,8 +27,10 @@
                             <li><a href="{{ route('articles.byCategory', 'Obat') }}">Obat</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Pangan') }}">Pangan</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Kosmetik') }}">Kosmetik</a></li>
-                            <li><a href="{{ route('articles.byCategory', 'Obat Tradisional') }}">Obat Tradisional</a></li>
-                            <li><a href="{{ route('articles.byCategory', 'Suplemen Kesehatan') }}">Suplemen Kesehatan</a></li>
+                            <li><a href="{{ route('articles.byCategory', 'Obat Tradisional') }}">Obat Tradisional</a>
+                            </li>
+                            <li><a href="{{ route('articles.byCategory', 'Suplemen Kesehatan') }}">Suplemen
+                                    Kesehatan</a></li>
                             <li><a href="{{ route('articles.byCategory', 'Materi FKP') }}">Materi FKP</a></li>
                         </ul>
                     </li>
@@ -39,10 +41,12 @@
             <div class="attr-right">
                 <div class="subscribe-area text-light text-center">
                     <div class="subscribe">
-                        <form action="#">
+                        <form action="{{ route('articles.search') }}" method="GET">
+                            <input type="hidden" name="category"
+                                value="{{ isset($categoryName) ? $categoryName : '' }}">
                             <div class="input-group stylish-input-group">
-                                <input type="email" placeholder="Cari Informasi" class="form-control"
-                                    name="email" />
+                                <input type="text" placeholder="Cari Informasi" class="form-control"
+                                    name="keyword" />
                                 <span class="input-group-addon">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </span>
@@ -51,8 +55,8 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="category" value="{{ $categoryName ?? '' }}">
         </div>
-
         <div class="overlay-screen"></div>
     </nav>
 </header>

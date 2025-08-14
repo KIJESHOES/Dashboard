@@ -47,7 +47,7 @@
     <!-- End Banner -->
 
     <!-- Start Features
-                                                    ============================================= -->
+                                                                ============================================= -->
     <div id="features" class="features-area default-padding bottom-small">
         <div class="container">
             <div class="row">
@@ -63,98 +63,143 @@
             </div>
             <div class="features-items">
                 <div class="row">
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-capsules"></i>
                             </div>
                             <div class="info">
-                                <h4>Obat</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Obat']) }}"
+                                        class="text-decoration-none">
+                                        Obat
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Materi lengkap seputar regulasi, keamanan, dan pengawasan obat modern untuk melindungi
                                     masyarakat dari produk ilegal dan tidak aman.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-mortar-pestle"></i>
                             </div>
                             <div class="info">
-                                <h4>Obat Tradisional</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Obat Tradisional']) }}"
+                                        class="text-decoration-none">
+                                        Obat Tradisional
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Informasi penting tentang kandungan, manfaat, dan pengawasan obat tradisional agar aman
                                     dikonsumsi dan sesuai standar.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-pills"></i>
                             </div>
                             <div class="info">
-                                <h4>Suplamen Kesehatan</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Suplemen Kesehatan']) }}"
+                                        class="text-decoration-none">
+                                        Suplamen Kesehatan
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Panduan pengawasan dan informasi suplemen kesehatan yang beredar agar konsumen mendapat
                                     produk yang berkualitas.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-spa"></i>
                             </div>
                             <div class="info">
-                                <h4>Kosmetik</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Kosmetik']) }}"
+                                        class="text-decoration-none">
+                                        Kosmetik
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Pengetahuan tentang standar kosmetik, bahan berbahaya, dan pengawasan agar produk yang
                                     digunakan aman dan sesuai aturan.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-bread-slice"></i>
                             </div>
                             <div class="info">
-                                <h4>Pangan</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Pangan']) }}"
+                                        class="text-decoration-none">
+                                        Pangan
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Edukasi pengawasan pangan mulai dari produksi hingga distribusi untuk menjamin keamanan
                                     dan kualitas pangan yang dikonsumsi.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 single-item">
-                        <div class="item">
+                        <div class="item f-item">
                             <div class="icon">
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="info">
-                                <h4>Materi FKP 2025</h4>
-                                <p>
+                                <h4>
+                                    <a href="{{ route('articles.byCategory', ['categoryName' => 'Materi FKP']) }}"
+                                        class="text-decoration-none">
+                                        Materi FKP 2025
+                                    </a>
+                                </h4>
+                                <p class="text-muted">
                                     Dokumentasi dan update hasil Forum Konsultasi Publik (FKP) 2025 sebagai referensi
                                     kebijakan dan regulasi terbaru dalam pengawasan produk.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
+            <style>
+                /* Hover efek underline hanya untuk link di judul */
+                .f-item a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+
         </div>
     </div>
     <!-- End Features -->
 
     <!-- Start Overview
-                                                        ============================================= -->
+                                                                    ============================================= -->
     <div id="overview" class="overview-area default-padding">
         <div class="container">
             <div class="row">
@@ -183,7 +228,7 @@
     <!-- End Overview -->
 
     <!-- Start Faq
-                                                ============================================= -->
+                                                            ============================================= -->
     <div class="faq-area bg-gray default-padding-top">
         <div class="container">
             <div class="row">
@@ -210,8 +255,8 @@
                                     </button>
                                 </div>
 
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>
                                             Melaksanakan kebijakan teknis operasional di bidang pengawasan obat dan makanan

@@ -12,7 +12,9 @@
                     <h1>{{ $categoryName }}</h1>
                     <ul class="breadcrumb">
                         <li><a href="{{ url('/') }}">Beranda</a></li>
-                        <li class="active">{{ $categoryName }}</li>
+                        @if (isset($categoryName) && $categoryName != '')
+                            <li class="active">{{ $categoryName }}</li>
+                        @endif
                     </ul>
                 </div>
             </div>
