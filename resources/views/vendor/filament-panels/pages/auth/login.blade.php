@@ -1,10 +1,4 @@
 <x-filament-panels::page.simple>
-
-    {{-- Logo kecil --}}
-    <div class="flex justify-center mb-4">
-        <img src="{{ asset('assets/img/logo-filament.png') }}" alt="Logo" class="w-20 h-20">
-    </div>
-
     {{-- Judul Sign In --}}
     <h2 class="text-center text-lg font-semibold mb-6">Login</h2>
 
